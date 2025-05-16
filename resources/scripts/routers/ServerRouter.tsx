@@ -278,7 +278,7 @@ export default () => {
     const NavigationSettings = useRef(null);
     const NavigationActivity = useRef(null);
     const NavigationMod = useRef(null);
-    const NavigationShell = useRef(null);
+    //const NavigationShell = useRef(null);
 
     const calculateTop = (pathname: string) => {
         if (!id) return '0';
@@ -293,7 +293,7 @@ export default () => {
         const ButtonStartup = NavigationStartup.current;
         const ButtonSchedules = NavigationSchedules.current;
         const ButtonSettings = NavigationSettings.current;
-        const ButtonShell = NavigationShell.current;
+        //const ButtonShell = NavigationShell.current;
         const ButtonActivity = NavigationActivity.current;
         const ButtonMod = NavigationMod.current;
 
@@ -323,8 +323,8 @@ export default () => {
             return (ButtonSchedules as any).offsetTop + HighlightOffset;
         if (pathname.endsWith(`/server/${id}/settings`) && ButtonSettings != null)
             return (ButtonSettings as any).offsetTop + HighlightOffset;
-        if (pathname.endsWith(`/server/${id}/shell`) && ButtonShell != null)
-            return (ButtonShell as any).offsetTop + HighlightOffset;
+        //if (pathname.endsWith(`/server/${id}/shell`) && ButtonShell != null)
+           // return (ButtonShell as any).offsetTop + HighlightOffset;
         if (pathname.endsWith(`/server/${id}/activity`) && ButtonActivity != null)
             return (ButtonActivity as any).offsetTop + HighlightOffset;
         if (pathname.endsWith(`/server/${id}/mods`) && ButtonMod != null)
@@ -570,18 +570,18 @@ export default () => {
                     </Can> */}
                                     </>
                                 )}
-                                <Can action={'startup.software'}>
+                                {/* <Can action={'startup.software'}>
                                     <NavLink
-                                        className='flex flex-row items-center transition-colors duration-200 hover:bg-[#ffffff11] rounded-md'
-                                        ref={NavigationShell}
-                                        to={`/server/${id}/shell`}
-                                        onClick={toggleSidebar}
-                                        end
+                                       // className='flex flex-row items-center transition-colors duration-200 hover:bg-[#ffffff11] rounded-md'
+                                       // ref={NavigationShell}
+                                        // to={`/server/${id}/shell`}
+                                       // onClick={toggleSidebar}
+                                        //end
                                     >
                                         <HugeIconsController fill='currentColor' />
                                         <p>Software</p>
                                     </NavLink>
-                                </Can>
+                                </Can> */}
                             </ul>
                         </MainSidebar>
 
